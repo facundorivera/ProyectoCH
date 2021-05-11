@@ -1,0 +1,828 @@
+/*Todos los titulos posiblemente en la misma gama de colores*/
+/*parrafos y listados en la misma gama de colores*/
+/*Imagenes de productos todas del mismo tamaño a excepcion de la index*/
+/*Imagenes de las personas(cocineros) del mismo tamaño*/
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+
+
+
+//Mixin para tamaños//
+@mixin sizes($width,$height) {
+    
+    height: $height;
+    width: $width;
+}
+//Mixin para tamaños//
+
+$TittlesColor: #d7cf07ff;
+
+/*reset*/
+* {
+    margin: 0%;
+    padding: 0%;
+}
+/*Reset*/
+
+h1 {
+    color:$TittlesColor ;
+}
+
+h2 {
+    color: $TittlesColor;
+}
+
+a {
+    color: #0a0908ff;
+    text-decoration: none;
+}
+
+/*Se quita puntos a la lista y se da format en linea (Desafio complemetario)*/
+li {
+    list-style: none;
+    display: inline-block;
+    padding-right: 3px;
+    position: relative;
+}
+
+
+hr {
+    border: 0;
+    height: 0;
+    text-align: center;
+    font-size: 10px;
+    line-height: 10px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+hr:after {
+    content: "\25ca\00a0\25ca\00a0\25ca\00a0\25ca";
+    position: relative;
+    top: -12px;
+    color: white;
+}
+
+
+
+/*Se crean clases para las fotos ya que no se puede generalizar con etquieta img*/
+.imgProd {
+
+    width: 650px;
+    margin: auto;
+    display: block;
+}
+
+ul {
+    margin: 0%;
+    padding: 0%;
+}
+
+.imgPersona {
+    @include sizes(100%,50%);
+}
+
+/*formato titulo de tabla desafio complementario*/
+th {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: $TittlesColor;
+}
+
+/*Formato a los input*/
+.inpText {
+    size: 6;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+.inpSubmit {
+    size: 10px;
+    margin-left: 10px;
+    border-radius: 1px;
+}
+
+/*Section Principal*/
+
+.sectionPadre {
+    display: grid;
+    grid-template-columns: 17% 35% auto;
+}
+
+/*Primer clumna*/
+.firsCol {
+    display: grid;
+    height: 100vh;
+    // background-color:#001f5f;
+    background-color: #0b2545ff;
+    grid-template-columns: 100%;
+    grid-template-rows: 30% 40% 30%;
+}
+
+
+
+.divLogo {
+    display: flex;
+    justify-content: center;
+
+    &__img{
+       @extend .divLogo;
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
+
+.btnBurger{
+    display: none;
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    z-index: 1;
+    top: 0px;
+    left: 0px;
+}
+
+.btnClose{
+    display: none;
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    z-index: 1;
+    top: 0px;
+    right: 0px;
+}
+
+.navGula {
+    display: grid;
+    height: 100%;
+    color: white;
+    justify-items: center;
+    margin-top: 30px;
+
+    &__ul{
+        display: grid;
+        padding: 0%;   
+    }
+
+    &__a{
+        color: white;
+        font-size: 20px;
+        transition: font-size 0.5s;
+        font-family: 'Caveat', cursive;
+        font-style: normal;
+        font-weight: 200px;
+        text-decoration: none;
+    }
+
+    &__icons{
+        width: 15px;
+    }
+}
+
+
+#carousel{
+    padding: 0px;
+}
+
+
+.divFooter {
+    display: grid;
+    grid-template-columns: 100%;
+    justify-items: center;
+    align-items: center;
+
+    &__icons{
+       display: flex;
+       width: 100%;
+       justify-content: space-around;
+       
+       i{
+           color: white;
+       }
+    }
+
+
+}
+
+
+
+
+ .navGula ul li a:hover {
+    color: yellow;
+    font-size: 30px;
+    transition: font-size 0.5s;
+    
+ }
+
+
+/*Fin primer Columna*/
+
+
+/*Segunda fila (Banner)*/
+
+.secondCol {
+    height: 100vh;
+
+    &__img{
+        @include sizes(100%,100vh);
+    }
+}
+
+/*Fin Segunda Fila (Banner)*/
+
+/*Comienzo tercer Fila*/
+
+.thirdCol {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    height: 100vh;
+    overflow: hidden;
+
+   #lista{
+       text-decoration: none;
+   }
+
+    &__productos{
+        //background-image: url(../Imagenes/Products.jpg);
+        background-size: cover;
+        background-position: center center;
+        background-color: rgba(0, 0, 0, 0.8);
+        filter: brightness(0.4);
+        // max-width: 100%;
+        height: auto;
+    }
+
+    &__productos--img2{
+        @extend .thirdCol__productos;
+        background-image: url(../Imagenes/Products.jpg);
+
+    }
+    &__productos--img3{
+        @extend .thirdCol__productos;
+        background-image: url(../Imagenes/Historia.png);
+    }
+
+    &__productos--img4{
+        @extend .thirdCol__productos;
+        background-image: url(../Imagenes/Galery.jpg);
+    }
+
+    &__productos--img5{
+        @extend .thirdCol__productos;
+        background-image: url(../Imagenes/Contact.jpg);
+    }
+   
+
+    &__productos:hover{
+        animation: 1s;
+        filter: brightness(1);
+    }
+
+    &__parrafo{
+        margin-top: 100px;
+        font-family: 'Caveat', cursive;
+        color: white;
+        font-size: 50px;
+    }
+
+
+}
+/*Fin tercer Fila*/
+
+
+
+/*Seccion Productos*/
+.secProductos {
+    display: grid;
+    grid-template-columns: 17% auto;
+}
+
+.productos{
+    display: grid;
+    grid-template-columns: auto auto auto;
+
+    &__img1{
+        background-image: url(../Imagenes/abcd.jpg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+.imgPro {
+    @extend .secondCol__img;
+    filter: brightness(0.4);
+}
+
+.imgPro:hover {
+    filter: brightness(1);
+}
+
+/*Fin Sección Productos*/
+
+
+
+/*Sección Galeria*/
+.sectFotos{
+    display: grid;
+    grid-template-columns: 50% 50%;
+
+    &__fotos1{
+        display: flex;
+        align-items: center;
+        height: 25vh;
+        width: 100%;
+        margin-bottom: 5px;
+
+        &__img{
+            margin-right: 5px;
+            width: 50%;
+            height: 100%;
+        }
+    }
+
+    &__img2{
+        height: 100%;
+        width: 100%;
+    }
+
+    &--mr{
+        margin-right: 5px;
+    }
+
+    &--hide{
+        display: block;
+    }
+}
+
+/*Sección Galeria*/
+
+
+/*Sección Contacto*/
+.contactSect {
+    background-color: black;
+    display: grid;
+    grid-template-columns: 17% 83%;
+    @include sizes(100%,100vh);
+    background-image: url(../Imagenes/FondoContact.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*Formualrio*/
+
+.animate__animated.animate__tada{
+    --animate-duration: 2s;
+
+}
+
+
+.sectForm{
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+
+.formTest{
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    @include sizes(90%,90%);
+    grid-template-rows: 10% auto;
+}
+
+.titleContact{
+    color: #fff;
+    /*Efecto Neon*/
+    text-shadow:
+    0 0 5px rgba(0,178,255,1),
+    0 0 10px rgba(0,178,255,1),
+    0 0 20px rgba(0,178,255,1),
+    0 0 40px rgba(38,104,127,1),
+    0 0 80px rgba(38,104,127,1),
+    0 0 90px rgba(38,104,127,1),
+    0 0 100px rgba(38,104,127,1),
+    0 0 140px rgba(38,104,127,1),
+    0 0 180px rgba(38,104,127,1);
+    /*Fin Efecto Neon*/
+}
+
+.contactForm {
+    display: grid;
+    align-items: flex-start;
+    justify-items: center;
+    @include sizes(80%,80% );
+
+    #formsizes{
+     @include sizes(80%,90%);
+    }
+
+    &__input{
+        background-color: transparent;
+        border: 2px solid yellow;
+
+    }
+
+    &__input:focus{
+        background-color: transparent;
+    }
+
+    &__input::placeholder{
+        @extend .titleContact;
+        font-weight: bolder;
+    }
+
+    &__buttons{
+        display: flex;
+        justify-content: space-around;
+        // @include sizes(100%,100%);
+        margin-top: 50px;
+    }
+
+    &__sendbtn{
+        background-color: transparent;
+        border: 2px solid yellow;
+        border-radius: 3px;
+        width: 30%;
+    }
+
+    &__cancelbtn{
+        @extend .contactForm__sendbtn;
+    }
+
+    &__cancelbtn:hover{
+        background-color: yellow;
+    }
+
+    &__sendbtn:hover{
+        @extend .contactForm__cancelbtn:hover;
+    }
+
+
+}
+
+#Apellido{
+    border: 2px solid brown;
+}
+
+#Correo{
+    border: 2px solid green;
+}
+
+#Celular{
+    border: 2px solid brown;
+}
+
+
+/*Paddings Nosotros*/
+#Comienzos{
+    padding: 0px;
+}
+#Inicio{
+    padding: 0px;
+}
+
+#padding{
+    padding: 0px;
+}
+
+
+
+.imgHist{
+    height: 100vh;
+    width: 100%;
+}
+
+.histSec{
+    display: grid;
+    height: 100vh;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+
+
+#Columna1{
+    position: fixed;
+    padding: 0px;
+}
+
+
+
+/*Map para bucle Iconos*/
+$redesIco:(
+    facebook,
+    instagram,
+    whatsapp
+);
+/*Map par bucle Iconos*/
+
+
+/*Bucle Iconos Footer*/
+@each $Icono in $redesIco{
+    .icons#{$Icono}{
+        src: 'Icons/#{$Icono}.png';
+    }
+}
+
+
+.bodScroll{
+    overflow-y: hidden;
+}
+
+.scrollhist{
+    display: grid;
+    // justify-content: center;
+    justify-items: center;
+    background-color: whitesmoke;
+
+    &__sec{
+        display: grid;
+        height: 100vh;
+        width: 80%;
+        
+    }
+
+    &__flecha{
+        position: relative;
+        bottom: 0px;
+        height: 50px;
+        margin-left: 250px;
+    }
+    
+}
+
+
+.products{
+    p{
+        font-family: 'Roboto', sans-serif;
+    }
+    display: grid;
+    @include sizes(83%,100vh);
+
+    &__menu1{
+        display: grid;
+        align-items: center;
+        background-color: whitesmoke;
+        grid-template-columns: 40% 60%;
+        height: 100%;
+
+        &__img{
+            display: grid;
+            height: 100%;
+            border-bottom: 1px solid grey;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+    }
+
+    &__menu2{
+        display: grid;
+        align-items: center;
+        background-color: whitesmoke;
+        grid-template-columns: 60% 40%;
+        height: 100%;
+    }
+
+    &__test{
+        animation-name: rotation;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        height: 120px;
+    }
+
+    &--mr{
+        margin-right: 10px;
+    }
+    &--ml{
+        margin-left: 10px;
+    }
+}
+
+
+/*MEDIAS QUERYS*/
+
+@media only screen and (max-width: 768px) {
+
+
+    .divLogo{
+        height: 250px;
+    }
+
+    .navGula .ulItems a {
+        font-size: 20px;
+    }
+
+    #Columna1{
+        display: none;
+    }
+
+    .firsCol{
+        display: none;
+    }
+
+    .contactSect{
+        display: grid;
+        grid-template-columns: 100%;
+    }
+
+    .formTest{
+        display: grid;
+        @include sizes(100%,80%);
+        align-items: center;
+        justify-items: center;
+        border: 1px solid yellow;
+        box-shadow: 20px 20px 20px rgba(0,0,0,1);
+        grid-template-rows: 10% 80%;
+    }
+
+    #formsizes{
+        width: 80%;
+    }
+
+    .formTest h3{
+        color: #fff;
+        /*Efecto Neon*/
+	    text-shadow:
+		0 0 5px rgba(0,178,255,1),
+		0 0 10px rgba(0,178,255,1),
+		0 0 20px rgba(0,178,255,1),
+		0 0 40px rgba(38,104,127,1),
+		0 0 80px rgba(38,104,127,1),
+		0 0 90px rgba(38,104,127,1),
+		0 0 100px rgba(38,104,127,1),
+		0 0 140px rgba(38,104,127,1),
+		0 0 180px rgba(38,104,127,1);
+        /*Fin Efecto Neon*/
+    }
+    
+
+    /*Start Contact Page*/
+    .contactForm{
+        display: grid;
+        border-radius: 3px;
+        align-items: center;
+        box-sizing: border-box;
+        @include sizes(80%,100% );
+
+        &__titulo{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+        }
+        
+        &__input{
+            background-color: transparent;
+            border: 2px solid yellow;
+        }
+
+        &__input::placeholder{
+            color: #fff;
+            /*Efecto Neon*/
+            text-shadow:
+            0 0 5px rgba(0,178,255,1),
+            0 0 10px rgba(0,178,255,1),
+            0 0 20px rgba(0,178,255,1),
+            0 0 40px rgba(38,104,127,1),
+            0 0 80px rgba(38,104,127,1),
+            0 0 90px rgba(38,104,127,1),
+            0 0 100px rgba(38,104,127,1),
+            0 0 140px rgba(38,104,127,1),
+            0 0 180px rgba(38,104,127,1);
+            /*Fin Efecto Neon*/
+        }
+
+        &__buttons{
+            display: flex;
+            justify-content: space-around;
+            // @include sizes(100%,100%);
+            margin-top: 50px;
+        }
+
+        &__sendbtn{
+            background-color: transparent;
+            border: 1px solid yellow;
+            width: 45%;
+        }
+
+        &__cancelbtn{
+            background-color: transparent;
+            border: 1px solid yellow;
+            width: 45%;
+        }
+    }
+    /*End Contact Page*/
+
+    /*Start gallery Section*/
+    .sectFotos{
+        display: grid;
+        grid-template-columns: 100%;
+    
+        &__fotos1{
+            display: flex;
+            align-items: center;
+            height: 25vh;
+            width: 100%;
+            margin-bottom: 5px;
+    
+            &__img{
+                width: 50%;
+                height: 100%;
+            }
+        }
+    
+        &__img2{
+            height: 100%;
+            width: 100%;
+        }
+    
+        &--mr{
+            margin-right: 5px;
+        }
+        &--hide{
+            display: none;
+        }
+    }
+    /*End gallery section*/
+
+
+    .products{
+        display: grid;
+        @include sizes(100%,100vh);
+
+        &__menu1{
+            display: grid;
+            align-items: center;
+            background-color: whitesmoke;
+            grid-template-columns: 40% 60%;
+            height: 100%;
+
+        }
+
+        &__menu2{
+            display: grid;
+            align-items: center;
+            background-color: whitesmoke;
+            grid-template-columns: 60% 40%;
+            height: 100%;
+        }
+
+        &__test{
+            animation-name: rotation;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            height: 120px;
+        }
+    }
+
+    @keyframes rotation {
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+    }
+
+
+     .btnBurger{
+        display: block;
+    }
+
+    .btnClose{
+        display: block;
+    }
+
+    .bodScroll{
+        overflow-y:scroll;
+    }
+
+    .scrollhist{
+        display: grid;
+        // justify-content: center;
+        justify-items: center;
+        background-color: whitesmoke;
+    
+        &__sec{
+            display: grid;
+            height: 100vh;
+            width: 80%;
+            
+        }
+    
+        &__flecha{
+            display: none;
+        }
+
+    }
+
+
+
+    /*End Products Section*/
+}

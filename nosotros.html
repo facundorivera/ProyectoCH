@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="shorcut icon" href="./Icons/pageIcon.png">
+    <!--FONT AWESOME-->
+    <script src="https://kit.fontawesome.com/66a5a00d70.js" crossorigin="anonymous"></script>
+    <!--Metas, keywords-->
+    <meta name="description" content="Nuestra historia podra no ser muy larga, pero es interesante y muy entretenida y nos definió no solo
+    como negocio sino como personas">
+    <meta name="keywords" content="Nosotros,Historia,Emprendimiento,Haburguesas">
+    <title>Nosotros!</title>
+</head>
+
+<body class="bodScroll" id="us">
+
+
+    <!--Animaciones WOW-->
+    <script src="js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+    <!--Fin animacion WOW-->
+    <section class="container-fluid">
+
+        <div class="row">
+            <div style="position:fixed;" id="padding" class="col-md-2 col-lg-2">
+                <div id="mySidevar" class="firsCol">
+
+                    <div class="divLogo">
+                        <img class="divLogo__img"" src=" Imagenes/Logo hamburguesa.png" alt="">
+                    </div>
+                    <aside>
+                        <button onclick="CloseSide()" class="btnClose"><img style="height: 30px;"
+                                src="./Imagenes/CloseMenu.png" alt=""></button>
+                        <nav class="navGula">
+                            <ul class="navGula__ul">
+                                <li><a class="navGula__a" href="index.html">INICIO</a></li>
+                                <li><a class="navGula__a" href="gulas.html">PRODUCTOS</a></li>
+                                <li><a class="navGula__a" href="nosotros.html">NOSOTROS</a></li>
+                                <li><a class="navGula__a" href="contacto.html">CONTACTO</a></li>
+                                <li><a class="navGula__a" href="galeriafotos.html">GALERIA</a></li>
+                            </ul>
+                        </nav>
+                    </aside>
+                    <div class="divFooter">
+                        <div class="divFooter__icons">
+                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                            <i class="fa fa-instagram" aria-hidden="true"></i>
+                            <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Div para contrarestar position fixed del navvar-->
+            <div class="col-md-2 col-lg-2"></div>
+            <div id="padding" class="d-none d-md-block col-md-4 col-lg-4">
+                <img class="imgHist" src="./Imagenes/Persona1.jpg" alt="">
+                <img class="imgHist" src="./Imagenes/Nosotros1.jpg" alt="">
+                <img class="imgHist" src="./Imagenes/McDonalds.jpg" alt="">
+            </div>
+
+            <div id="padding" class="col-md-6 col-lg-6">
+                <button onclick="OpenSide()" id="btnBurger" class="btnBurger"><img style="height: 50px;"
+                        src="./Imagenes/BurgerMenu.png" alt=""></button>
+                <div id="close" class="scrollhist">
+                    <div id="first" class="scrollhist__sec img1">
+                        <h4 class="text-center">Nuestro Origen</h4>
+                        <p style="margin-top: 30px;" class="text-justify">Somos una empresa orgullosamente Cordobesa,
+                            especializados en
+                            la producción de comida, aunque nuestro fuerte son las hamburguesas, con la intencion e idea
+                            de distingirnos por
+                            nuestro productos altamente exquisitos y aun precio justo.
+                            Nuestras hamburguesas se caracterizan por el alto sabor proveniente de todos los productos
+                            caseros, desde el pan
+                            hasta la mayonesa.</p>
+                        <p class="text-jusitfy">Hoy somos rotiseria lider en nuestra ciudad. Cada dia nos
+                            sentimos motivados
+                            de pensar que uno de nuestros objetivos es poner la comida artesanal y casera por encima
+                            la comida rapida.</p>
+                        <!-- <p  class="text-center">Decidi utilizar todo lo aprendido durante mis años como chefs y comence a vender
+                            viandas en las redes sociales y de boca en boca.
+                        </p> -->
+                        <a style="width: 50px;" href="#second"><img class="scrollhist__flecha"
+                                src="./Icons/FlechaDown.png" alt=""></a>
+                    </div>
+                    <div id="second" class="scrollhist__sec">
+                        <h4 class="text-center">Cómo comenzamos</h4>
+                        <p style="margin-top: 30px;" class="text-justify">
+                            Nacemos en Febrero del 2013, la idea original era simplemente subsistir un tiempo hasta
+                            conseguir trabajo
+                            nuevamente ya que nos encontrabamos desempleados desde aproximadamente 5 meses.
+                            Comenzamos haciendo viandas para amigos y conocidos, luego gracias a las redes sociales y el
+                            boca en boca logramos
+                            tomar cierto reconocimientos, siempre por la calidad y precio de los productos que
+                            ofreciamos
+                            Un dia uno de nuestros clientes nos solicito si era posible hacerle alguna comida para una
+                            juntada con amigos,
+                            optamos por prepararles unas hamburguesas y asi sin darnos cuentas comenzaba esta historia.
+                            El cliente y sus amistades quedaron encantados con nuestro producto, lo que nos impulso a
+                            seguir probando y dando mas
+                            luegar a esto en nuestros menus del dia a dia.</p>
+                        <a style="width: 50px;" href="#third"><img class="scrollhist__flecha"
+                                src="./Icons/FlechaDown.png" alt=""></a>
+                    </div>
+                    <div id="third" class="scrollhist__sec">
+                        <h4 class="text-center">Yankee go home</h4>
+                        <p style="margin-top: 30px;" class="text-justify">
+                            Nuestra empresa se sumó a la lucha contra las grandes marcas Internacionales, que
+                            no solo
+                            boicotean las marcas y empresas que ellos creen una amenaza sino que tambien ponen trabas y
+                            generan movimientos
+                            dentro de las instituciones publicas para embarrar y destruir sus esfuerzos y logros</p>
+                        <p class="text-jusitfy">
+                            Desde hace ya dos años, formamos parte de la asociacion sin bienes de lucro "Yankee Go
+                            Home", formada
+                            por personas que se vieron afectadas alguna vez en su vida por las influencias y el poder de
+                            estas grandes
+                            marcas.
+                        </p>
+                        <p class="text-justify">Repudiamos cualquier intento de desestimar lo logrado hasta el dia de
+                            hoy.
+                            Si sos parte de un emprendimiento que se siente o está amenazado por situaciones como estas,
+                            no
+                            dudes en contactarnos
+                            podemos ayudarte y decirte como actuar ante estos casos.
+                        </p>
+                        <a style="width: 50px;" href="#first"><img class="scrollhist__flecha scrollhist--up"
+                                src="./Icons/FlechaUp.png" alt=""></a>
+                    </div>
+                    <!-- </div> -->
+                </div>
+            </div>
+
+    </section>
+</body>
+
+<script src="./js/gula.js">
+
+</script>
+
+</html>

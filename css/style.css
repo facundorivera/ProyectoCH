@@ -73,10 +73,6 @@ th {
   border-radius: 1px; }
 
 /*Section Principal*/
-.sectionPadre {
-  display: grid;
-  grid-template-columns: 17% 35% auto; }
-
 /*Primer clumna*/
 .firsCol {
   display: grid;
@@ -244,7 +240,6 @@ th {
 /*Sección Galeria*/
 /*Sección Contacto*/
 .contactSect {
-  background-color: black;
   display: grid;
   grid-template-columns: 17% 83%;
   height: 100vh;
@@ -327,12 +322,6 @@ th {
 .imgHist {
   height: 100vh;
   width: 100%; }
-
-.histSec {
-  display: grid;
-  height: 100vh;
-  align-items: flex-start;
-  justify-content: center; }
 
 #Columna1 {
   position: fixed;

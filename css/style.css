@@ -533,8 +533,12 @@ th {
       height: 100vh;
       width: 80%;
       margin-top: 50px; }
+      .scrollhist__sec--mt {
+        margin-top: 30px; }
     .scrollhist__flecha {
       display: none; }
+    .scrollhist--a {
+      width: 50px; }
   .divFooter {
     display: grid;
     grid-template-columns: 100%;

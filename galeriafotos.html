@@ -26,7 +26,7 @@
 
     <div class="container-fluid">
         <div class="row">
-            <button id="btnBurger" onclick="OpenSide()" class="btnBurger"><img style="height: 50px;"
+            <button id="btnBurger" onclick="OpenSide()" class="btnBurger"><img id="imgBtnopen"
                     src="./Imagenes/BurgerMenu.png" alt=""></button>
             <div style="padding: 0px;" class=" col-md-3 col-lg-2">
                 <section id="mySidevar" class="firsCol">
@@ -35,7 +35,7 @@
                     </div>
 
                     <aside>
-                        <button onclick="CloseSide()" class="btnClose"><img style="height: 30px;"
+                        <button onclick="CloseSide()" class="btnClose"><img id="imgBtn"
                                 src="./Imagenes/CloseMenu.png" alt=""></button>
                         <nav class="navGula">
 
@@ -54,11 +54,15 @@
                         </nav>
                     </aside>
                     <div class="divFooter">
-                        <div class="divFooter__icons">
-                            <i class="fa fa-facebook" aria-hidden="true"></i>
-                            <i class="fa fa-instagram" aria-hidden="true"></i>
-                            <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                        <p class="mt-5">ES|EN</p>
+                        <div class="d-flex">
+                        <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                        <a href=""><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
                         </div>
+                        <p  class="text-center">Hamburgulas <br>
+                            Villa Maria, Cordoba, Argentina <br>
+                            Calle falsa 123</p>
                     </div>
                 </section>
             </div>

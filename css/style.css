@@ -110,6 +110,9 @@ th {
   top: 0px;
   right: 0px; }
 
+#imgBtn {
+  height: 30px; }
+
 .navGula {
   display: grid;
   height: 100%;
@@ -136,14 +139,17 @@ th {
 .divFooter {
   display: grid;
   grid-template-columns: 100%;
+  align-items: center;
   justify-items: center;
-  align-items: center; }
-  .divFooter__icons {
-    display: flex;
-    width: 100%;
-    justify-content: space-around; }
-    .divFooter__icons i {
-      color: white; }
+  justify-content: center;
+  width: 100%; }
+  .divFooter i {
+    color: white;
+    margin-right: 10px; }
+  .divFooter p {
+    color: white;
+    font-size: 10px;
+    font-family: 'Roboto', sans-serif; }
 
 .navGula ul li a:hover {
   color: yellow;
@@ -512,6 +518,10 @@ th {
     display: block; }
   .btnClose {
     display: block; }
+  #imgBtnopen {
+    height: 60px; }
+  #imgBtnclose {
+    height: 30px; }
   .bodScroll {
     overflow-y: scroll; }
   .scrollhist {
@@ -521,7 +531,22 @@ th {
     .scrollhist__sec {
       display: grid;
       height: 100vh;
-      width: 80%; }
+      width: 80%;
+      margin-top: 50px; }
     .scrollhist__flecha {
       display: none; }
+  .divFooter {
+    display: grid;
+    grid-template-columns: 100%;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    width: 100%; }
+    .divFooter i {
+      color: white;
+      margin-right: 10px; }
+    .divFooter p {
+      color: white;
+      font-size: 10px;
+      font-family: 'Roboto', sans-serif; }
   /*End Products Section*/ }

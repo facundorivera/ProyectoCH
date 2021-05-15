@@ -3,7 +3,7 @@ $(document).ready(function () {
       $("#mySidevar").removeClass("showMenu");
       $("#banner").addClass("showMenu");
       //Quito boton burger
-      // $("#imgBtnopen").addClass("showMenu")
+      $("#imgBtnopen").addClass("showMenu")
     });
   });
 

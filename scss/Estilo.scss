@@ -41,28 +41,8 @@ a {
 /*Se quita puntos a la lista y se da format en linea (Desafio complemetario)*/
 li {
     list-style: none;
-    display: inline-block;
-    padding-right: 3px;
-    position: relative;
 }
 
-
-hr {
-    border: 0;
-    height: 0;
-    text-align: center;
-    font-size: 10px;
-    line-height: 10px;
-    text-align: center;
-    margin-top: 20px;
-}
-
-hr:after {
-    content: "\25ca\00a0\25ca\00a0\25ca\00a0\25ca";
-    position: relative;
-    top: -12px;
-    color: white;
-}
 
 
 
@@ -83,26 +63,6 @@ ul {
     @include sizes(100%, 50%);
 }
 
-/*formato titulo de tabla desafio complementario*/
-th {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: $TittlesColor;
-}
-
-/*Formato a los input*/
-.inpText {
-    size: 6;
-    border-radius: 5px;
-    margin-left: 10px;
-}
-
-.inpSubmit {
-    size: 10px;
-    margin-left: 10px;
-    border-radius: 1px;
-}
-
-/*Section Principal*/
 
 /*Primer clumna*/
 .firsCol {
@@ -209,7 +169,7 @@ th {
 
 
 .navGula ul li a:hover {
-    color: yellow;
+    color: white;
     font-size: 30px;
     transition: font-size 0.5s;
 
@@ -314,7 +274,6 @@ th {
 }
 
 .imgPro {
-    @extend .secondCol__img;
     filter: brightness(0.4);
 }
 
@@ -330,33 +289,31 @@ th {
 .sectFotos {
     display: grid;
     grid-template-columns: 50% 50%;
+    grid-template-rows: 50vh 50vh;
 
-    &__fotos1 {
-        display: flex;
-        align-items: center;
-        height: 25vh;
-        width: 100%;
-        margin-bottom: 5px;
-
-        &__img {
-            margin-right: 5px;
-            width: 50%;
-            height: 100%;
-        }
+    &__carusel{
+        height: 30vh;
     }
 
-    &__img2 {
+    &__img{
+        display: grid;
+        justify-content: space-evenly;
+        align-content: space-evenly;
+        grid-template-columns: 45% 45%;
+        grid-template-rows: 45% 45%;
+    }
+
+    &--foto{
         height: 100%;
         width: 100%;
     }
+    
+}
 
-    &--mr {
-        margin-right: 5px;
-    }
 
-    &--hide {
-        display: block;
-    }
+
+#carusel{
+    display: none;
 }
 
 /*Sección Galeria*/
@@ -375,11 +332,6 @@ th {
 }
 
 /*Formualrio*/
-
-.animate__animated.animate__tada {
-    --animate-duration: 2s;
-
-}
 
 
 .sectForm {
@@ -611,6 +563,7 @@ $redesIco:(facebook,
 
     .showMenu{
         display: none;
+
     }
 
 
@@ -712,35 +665,28 @@ $redesIco:(facebook,
     /*Start gallery Section*/
     .sectFotos {
         display: grid;
-        grid-template-columns: 100%;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 100%;
 
-        &__fotos1 {
-            display: flex;
-            align-items: center;
-            height: 25vh;
-            width: 100%;
-            margin-bottom: 5px;
-
-            &__img {
-                width: 50%;
-                height: 100%;
-            }
+        &__bgScreen{
+            display: block;
         }
 
-        &__img2 {
-            height: 100%;
-            width: 100%;
-        }
-
-        &--mr {
-            margin-right: 5px;
-        }
-
-        &--hide {
+        &__carusel{
+            height: 50vh;
+        } 
+        
+        &__img{
             display: none;
         }
     }
 
+     #carusel{
+         display: block;
+    }
+    .fotoHei{
+        height: 50vh;
+    }
     /*End gallery section*/
 
 
@@ -754,7 +700,6 @@ $redesIco:(facebook,
             background-color: whitesmoke;
             grid-template-columns: 40% 60%;
             height: 100%;
-
         }
 
         &__menu2 {
@@ -829,7 +774,6 @@ $redesIco:(facebook,
         &--a{
             width: 50px;
         }
-
     }
 
     .divFooter {
@@ -856,4 +800,24 @@ $redesIco:(facebook,
 
 
     /*End Products Section*/
+}
+
+@media only screen and (max-width:600px) {
+
+    .sectFotos {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 100%
+
+     
+
+        &__carusel{
+            height: 20vh;
+        } 
+        
+        &__img{
+            display: none;
+        }
+    }
+    
 }

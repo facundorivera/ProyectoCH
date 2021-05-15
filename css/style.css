@@ -22,25 +22,7 @@ a {
 
 /*Se quita puntos a la lista y se da format en linea (Desafio complemetario)*/
 li {
-  list-style: none;
-  display: inline-block;
-  padding-right: 3px;
-  position: relative; }
-
-hr {
-  border: 0;
-  height: 0;
-  text-align: center;
-  font-size: 10px;
-  line-height: 10px;
-  text-align: center;
-  margin-top: 20px; }
-
-hr:after {
-  content: "\25ca\00a0\25ca\00a0\25ca\00a0\25ca";
-  position: relative;
-  top: -12px;
-  color: white; }
+  list-style: none; }
 
 /*Se crean clases para las fotos ya que no se puede generalizar con etquieta img*/
 .imgProd {
@@ -56,23 +38,6 @@ ul {
   height: 50%;
   width: 100%; }
 
-/*formato titulo de tabla desafio complementario*/
-th {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  color: #d7cf07ff; }
-
-/*Formato a los input*/
-.inpText {
-  size: 6;
-  border-radius: 5px;
-  margin-left: 10px; }
-
-.inpSubmit {
-  size: 10px;
-  margin-left: 10px;
-  border-radius: 1px; }
-
-/*Section Principal*/
 /*Primer clumna*/
 .firsCol {
   display: grid;
@@ -148,7 +113,7 @@ th {
     font-family: 'Roboto', sans-serif; }
 
 .navGula ul li a:hover {
-  color: yellow;
+  color: white;
   font-size: 30px;
   transition: font-size 0.5s; }
 
@@ -156,7 +121,7 @@ th {
 /*Segunda fila (Banner)*/
 .secondCol {
   height: 100vh; }
-  .secondCol__img, .imgPro {
+  .secondCol__img {
     height: 100vh;
     width: 100%; }
 
@@ -218,24 +183,22 @@ th {
 /*Sección Galeria*/
 .sectFotos {
   display: grid;
-  grid-template-columns: 50% 50%; }
-  .sectFotos__fotos1 {
-    display: flex;
-    align-items: center;
-    height: 25vh;
-    width: 100%;
-    margin-bottom: 5px; }
-    .sectFotos__fotos1__img {
-      margin-right: 5px;
-      width: 50%;
-      height: 100%; }
-  .sectFotos__img2 {
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 50vh 50vh; }
+  .sectFotos__carusel {
+    height: 30vh; }
+  .sectFotos__img {
+    display: grid;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+    grid-template-columns: 45% 45%;
+    grid-template-rows: 45% 45%; }
+  .sectFotos--foto {
     height: 100%;
     width: 100%; }
-  .sectFotos--mr {
-    margin-right: 5px; }
-  .sectFotos--hide {
-    display: block; }
+
+#carusel {
+  display: none; }
 
 /*Sección Galeria*/
 /*Sección Contacto*/
@@ -250,9 +213,6 @@ th {
   background-size: cover; }
 
 /*Formualrio*/
-.animate__animated.animate__tada {
-  --animate-duration: 2s; }
-
 .sectForm {
   display: grid;
   align-items: center;
@@ -448,23 +408,18 @@ th {
   /*Start gallery Section*/
   .sectFotos {
     display: grid;
-    grid-template-columns: 100%; }
-    .sectFotos__fotos1 {
-      display: flex;
-      align-items: center;
-      height: 25vh;
-      width: 100%;
-      margin-bottom: 5px; }
-      .sectFotos__fotos1__img {
-        width: 50%;
-        height: 100%; }
-    .sectFotos__img2 {
-      height: 100%;
-      width: 100%; }
-    .sectFotos--mr {
-      margin-right: 5px; }
-    .sectFotos--hide {
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100%; }
+    .sectFotos__bgScreen {
+      display: block; }
+    .sectFotos__carusel {
+      height: 50vh; }
+    .sectFotos__img {
       display: none; }
+  #carusel {
+    display: block; }
+  .fotoHei {
+    height: 50vh; }
   /*End gallery section*/
   .products {
     display: grid;
@@ -533,3 +488,12 @@ th {
       font-size: 10px;
       font-family: 'Roboto', sans-serif; }
   /*End Products Section*/ }
+
+@media only screen and (max-width: 600px) {
+  .sectFotos {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100% .sectFotos __carusel;
+      grid-template-rows-height: 20vh; }
+    .sectFotos__img {
+      display: none; } }

@@ -33,13 +33,13 @@
 
         <div class="row">
             <div style="position:fixed;" id="padding" class="col-md-2 col-lg-2">
-                <div id="mySidevar" class="firsCol">
+                <div id="mySidevar" class="firsCol showMenu">
 
                     <div class="divLogo">
                         <img class="divLogo__img"" src=" Imagenes/Logo hamburguesa.png" alt="Logo">
                     </div>
                     <aside>
-                        <button onclick="CloseSide()" class="btnClose"><img id="imgBtn"
+                        <button  class="btnClose"><img id="imgBtn"
                                 src="./Imagenes/CloseMenu.png" alt="BotonCerrarNavegacion"></button>
                         <nav class="navGula">
                             <ul class="navGula__ul">
@@ -74,7 +74,7 @@
             </div>
 
             <div id="padding" class="col-md-6 col-lg-6">
-                <button onclick="OpenSide()" id="btnBurger" class="btnBurger"><img id="imgBtnopen"
+                <button  id="btnBurger" class="btnBurger"><img id="imgBtnopen"
                         src="./Imagenes/BurgerMenu.png" alt="BotonAbrirNavegacion"></button>
                 <div id="close" class="scrollhist">
                     <div id="first" class="scrollhist__sec img1">
@@ -146,10 +146,20 @@
             </div>
 
     </section>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+        integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous">
+    </script>
+
+    <script src="./js/gula.js">
+
+    </script>
 </body>
 
-<script src="./js/gula.js">
-
-</script>
 
 </html>

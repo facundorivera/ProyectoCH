@@ -292,6 +292,9 @@ ul {
 .bodScroll {
   overflow-y: hidden; }
 
+.usScroll {
+  overflow-y: hidden; }
+
 #altSection {
   height: 100vh; }
 
@@ -490,6 +493,10 @@ ul {
       color: white;
       font-size: 10px;
       font-family: 'Roboto', sans-serif; }
+  .bodScroll {
+    overflow-y: hidden; }
+  .usScroll {
+    overflow-y: scroll; }
   /*End Products Section*/ }
 
 @media only screen and (max-width: 600px) {

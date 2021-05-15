@@ -465,6 +465,10 @@ $redesIco:(facebook,
     overflow-y: hidden;
 }
 
+.usScroll{
+    overflow-y: hidden;
+}
+
 #altSection{
     height: 100vh;
 }
@@ -799,6 +803,14 @@ $redesIco:(facebook,
             font-size: 10px;
             font-family: 'Roboto', sans-serif;
         }
+    }
+
+    .bodScroll {
+        overflow-y: hidden;
+    }
+
+    .usScroll{
+        overflow-y: scroll;
     }
 
 

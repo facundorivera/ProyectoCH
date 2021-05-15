@@ -292,6 +292,9 @@ ul {
 .bodScroll {
   overflow-y: hidden; }
 
+#altSection {
+  height: 100vh; }
+
 .scrollhist {
   display: grid;
   justify-items: center;

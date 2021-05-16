@@ -4,6 +4,8 @@ $(document).ready(function () {
       $("#banner").addClass("showMenu");
       //Quito boton burger
       $("#imgBtnopen").addClass("showMenu")
+      $("#products").addClass("showMenu")
+      $("#Nosotros").addClass("showMenu")
     });
   });
 
@@ -13,7 +15,8 @@ $(document).ready(function () {
       $("#mySidevar").addClass("showMenu");
       $("#banner").removeClass("showMenu"); 
       //Agrego boton burger
-      $("#imgBtnopen").removeClass("showMenu") 
+      $("#imgBtnopen").removeClass("showMenu")
+      $("#Nosotros").removeClass("showMenu")
     });
   });
 

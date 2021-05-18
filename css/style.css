@@ -414,7 +414,7 @@ ul {
   /*Start gallery Section*/
   .sectFotos {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 100%;
     grid-template-rows: 100%; }
     .sectFotos__bgScreen {
       display: block; }
@@ -496,14 +496,4 @@ ul {
   .bodScroll {
     overflow-y: hidden; }
   .usScroll {
-    overflow-y: scroll; }
-  /*End Products Section*/ }
-
-@media only screen and (max-width: 600px) {
-  .sectFotos {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 100% .sectFotos __carusel;
-      grid-template-rows-height: 20vh; }
-    .sectFotos__img {
-      display: none; } }
+    overflow-y: scroll; } }

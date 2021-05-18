@@ -675,7 +675,7 @@ $redesIco:(facebook,
     /*Start gallery Section*/
     .sectFotos {
         display: grid;
-        grid-template-columns: 50% 50%;
+        grid-template-columns: 100%;
         grid-template-rows: 100%;
 
         &__bgScreen{
@@ -817,25 +817,4 @@ $redesIco:(facebook,
 
 
 
-    /*End Products Section*/
-}
-
-@media only screen and (max-width:600px) {
-
-    .sectFotos {
-        display: grid;
-        grid-template-columns: 100%;
-        grid-template-rows: 100%
-
-     
-
-        &__carusel{
-            height: 20vh;
-        } 
-        
-        &__img{
-            display: none;
-        }
-    }
-    
 }

@@ -4,7 +4,8 @@ $(document).ready(function () {
       $("#banner").addClass("showMenu");
       //Quito boton burger
       $("#imgBtnopen").addClass("showMenu")
-      $("#products").addClass("showMenu")
+      //No funciono con showMenu, se agrega al de bootsrap
+      $("#products").addClass("d-none")
       $("#Nosotros").addClass("showMenu")
     });
   });
@@ -17,6 +18,8 @@ $(document).ready(function () {
       //Agrego boton burger
       $("#imgBtnopen").removeClass("showMenu")
       $("#Nosotros").removeClass("showMenu")
+      //No funciono con showMenu, se agrega la de bootstrap
+      $("#products").removeClass("d-none")
     });
   });
 
